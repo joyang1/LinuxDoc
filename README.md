@@ -4,7 +4,39 @@
 ## 文件管理
 ### diff
 比较给定的两个文件的不同。
-**补充说明**：**diff 命令**在最简单的情况下，比较给定的两个文件的不同。如果使用“-”代替“文件”参数，则要比较的内容将来自标准输入。diff 命令是以逐行的方式来比较文本文件的异同处。
+**补充说明**：**diff 命令**在最简单的情况下，比较给定的两个文件的不同。如果使用“-”代替“文件”参数，则要比较的内容将来自标准输入。diff 命令是以逐行的方式来比较文本文件的异同处。如果该命令指定进行目录的比较，则将会比较该目录中的同名文件，而不会对其子目录文件进行任何比较操作。
+
+**语法**
+
+```
+
+diff (选项) （参数）
+
+```
+
+**选项**
+
+```
+
+-<行数>：指定要显示多少行文本。此参数必须与 -c 或 -u 参数一并使用。
+
+```
+
+**参数**
+
+- 文件1：指定要比较的第一个文件；
+- 文件2：指定要比较的第二个文件。
+
+**demo**
+
+将目录 `/data/tommy` 下的文件 test.txt 与当前目录下的文件 test.txt 进行比较，输入如下命令：
+```
+
+> diff /data/tommy test.txt
+
+```
+
+
 
 ### diffstat
 显示 diff 命令输出内容的柱状图。
@@ -100,31 +132,390 @@
 
 ### cat
 
+### chattr
+
+### chgrp
+
+### chmod
+
+### chown
+
+### cksum
+
+### cmp
+
+### cp
+
+### cut
+
+### indent
+
 
 ## 文件传输
+### bye
+
+### ftp
+
+### ftpcount
+
+### ftpshut
+
+### ftpwho
+
+### ncftp
+
+### tftp
+
+### uucico
+
+### uupick
+
+### uuto
+
+### scp
 
 
 ## 文本处理
+### awk
+
+### col
+
+### colrm
+
+### comm
+
+### csplit
+
+### ed
+
+### egrep
+
+### ex
+
+### fgrep
+
+### fmt
+
+### fold
+
+### grep
+
+### ispell
+
+### jed
+
+### joe
+
+### join
+
+### look
+
+### pico
+
+### sed
+
+### sort
+
+### spell
+
+### tr
+
+### uniq
+
+### vi
+
+### wc
 
 
 ## 备份压缩
+### ar
+
+### bunzip2
+
+### bzip2
+
+### bzip2recover
+
+### compress
+
+### cpio
+
+### dump
+
+### gunzip
+
+### gzexe
+
+### gzip
+
+### lha
+
+### restore
+
+### tar
+
+### unarj
+
+### unzip
+
+### zipinfo
 
 
 ## 系统管理
+### chfn
+
+### chsh
+
+### date
+
+### exit
+
+### finger
+
+### free
+
+### groupdel
+
+### groupmod
+
+### halt
+
+### id
+
+### kill
+
+### last
+
+### lastb
+
+### login
+
+### logname
+
+### logout
+
+### logrotate
+
+### nice
+
+### ps
+
+### pstree
+
+### reboot
+
+### renice
+
+### rlogin
+
+### rsh
+
+### screen
+
+### shutdown
+
+### su
+
+### sudo
+
+### suspend
+
+### tload
+
+### top
+
+### uname
+
+### useradd
+
+### userdel
+
+### usermod
+
+### w
+
+### who
+
+### whoami
 
 
 ## 系统设置
+### alias
+
+### bind
+
+### chkconfig
+
+### chroot
+
+### clock
+
+### crontab
+
+### declare
+
+### depmod
+
+### dircolors
+
+### dmesg
+
+### enable
+
+### export
+
+### grpconv
+
+### grpunconv
+
+### hwclock
+
+### insmod
+
+### lilo
+
+### lsmod
+
+### modprobe
+
+### ntsysv
+
+### passwd
+
+### pwconv
+
+### pwunconv
+
+### resize
+
+### rmmod
+
+### rpm
+
+### set
+
+### ulimit
+
+### unalias
+
+### unset
 
 
 ## 网络通讯
+### ppp-off
+
+### telnet
+
+### cu
+
+### ip
+
+### ifconfig
+
+### mesg
+
+### nc
+
+### netstat
+
+### ping
+
+### talk
+
+### tcpdump
+
+### traceroute
+
+### write
+
+### arpwatch
+
+### apachectl
 
 
 ## 磁盘管理
+### cd
+
+### df
+
+### dirs
+
+### du
+
+### edquota
+
+### eject
+
+### ls
+
+### mkdir
+
+### pwd
+
+### quota
+
+### quotacheck
+
+### quataoff
+
+### quotaon
+
+### repquota
+
+### rmdir
+
+### stat
+
+### tree
+
+### umount
 
 
 ## 磁盘维护
+### badblocks
+
+### dd
+
+### e2fsck
+
+### fdisk
+
+### fsck
+
+### hdparm
+
+### losetup
+
+### mkbootdisk
+
+### mke2fs
+
+### mkfs
+
+### mkinitrd
+
+### mkisofs
+
+### mkswap
+
+### swapoff
+
+### swapon
+
+### sync
 
 
 ## 电子邮件与新闻组
+### elm
+
+### mail
+
+### mailq
+
+### xlsatoms
+
+### xlsclients
+
+### xlsfonts
 
 
