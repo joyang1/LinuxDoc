@@ -230,6 +230,8 @@ ln /test1/t1.c /test2/t2.c
 
 ```
 
+在执行 ln 命令之前，目录 `/data/tommy/test2` 中不存在 test2.c 文件。执行 ln 之后，在 `/data/tommy/test2` 目录中才有 test2.c 文件，表明 test1.c 和 test2.c 链接起来（注意，二者在物理上是同一文件），利用 `ls -l` 命令可以看到链接数的变化。 
+
 
 
 ### locate
