@@ -221,7 +221,7 @@ simple, never    # 永远使用普通方式备份
 
 **实例**
 
-将目录 `/data/tommy/test1` 下的文件 t1.c 连接到目录 `/data/tommy/test2` 下的文件 t2.c。
+将目录 `/data/tommy/test1` 下的文件 t1.c 链接到目录 `/data/tommy/test2` 下的文件 t2.c。
 
 ```
 
@@ -230,12 +230,26 @@ ln /test1/t1.c /test2/t2.c
 
 ```
 
-在执行 ln 命令之前，目录 `/data/tommy/test2` 中不存在 test2.c 文件。执行 ln 之后，在 `/data/tommy/test2` 目录中才有 test2.c 文件，表明 test1.c 和 test2.c 链接起来（注意，二者在物理上是同一文件），利用 `ls -l` 命令可以看到链接数的变化。 
+在执行 ln 命令之前，目录 `/data/tommy/test2` 中不存在 test2.c 文件。执行 ln 之后，在 `/data/tommy/test2` 目录中才有 test2.c 文件，表明 test1.c 和 test2.c 链接起来（注意，二者在物理上是同一文件），利用 `ls -l` 命令可以看到链接数的变化。
+
+在目录 `/data/tommy/test2` 下建立一个符号链接文件 test2-1.c，使它指向目录 `/data/tommy/test3`。
+
+```
+
+ln -s /data/tommy/test3 /data/tommy/test2/test2-1.c
+
+```
+
+执行完该命令后，`/data/tommy/test3` 代表的路径将存放在名为 `/data/tommy/test2/test2-1.c` 的文件中。
 
 
 
 ### locate
 比 find 更好用的文件查找工具。
+
+**补充说明**
+
+locate 让使用者可以很快速的搜寻档案系统内是否有指定的档案。其方法是先建立一个包括系统内所有档案名称及路径的数据库，之后当寻找时就只需查询这个数据库，而不必实际深入档案系统之中了。在一般的 distribution 之中，数据库的建立都被放在 crontab 中自动执行。
 
 ### slocate
 查找文件或目录。
